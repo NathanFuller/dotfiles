@@ -21,7 +21,7 @@ set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 syntax on
-colo peachpuff
+colo darkblue
 "set tabstop=4
 "set shiftwidth=4
 
