@@ -2,8 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-. /etc/apache2/envvars
-
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 
@@ -41,7 +39,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PS1='\[\033[01;32m\]${C9_USER}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)") $ '
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -54,3 +51,9 @@ esac
 
 export rvm_silence_path_mismatch_check_flag=1
 
+# A function that puts me into the folder for a class
+class() {
+	cd ~/School/Fall2018/"$1"
+}
+export -f class
+export EDITOR="/usr/bin/vim"
