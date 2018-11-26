@@ -29,3 +29,8 @@ colo darkblue
 
 inoremap jj <Esc>
 noremap 2O O<CR><Esc>ki
+
+noremap ,h h
+noremap ,j j
+noremap ,k k
+noremap ,l l
