@@ -11,8 +11,13 @@ call plug#end()
 "-----------------Things that aren't plugins go below this line -------------------
 
 
-let g:slimv_swank_cmd = '! tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp" & '
+"TODO: Make it choose between these somehow. /mnt/shared/sbin/tmux is what
+"works on c9, but I doubt it will work on the RPi or MacBook.
+"let g:slimv_swank_cmd = '! tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp" & '
+let g:slimv_swank_cmd = '! /mnt/shared/sbin/tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp"'
+
 let g:lisp_rainbow=1
+let g:slimv_repl_split=4
 
 set number
 set nowrap
@@ -21,7 +26,7 @@ set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 syntax on
-colo darkblue
+colo peachpuff
 "set tabstop=4
 "set shiftwidth=4
 
