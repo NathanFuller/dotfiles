@@ -16,14 +16,17 @@ call plug#end()
 "let g:slimv_swank_cmd = '! tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp" & '
 let g:slimv_swank_cmd = '! /mnt/shared/sbin/tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp"'
 
-let g:lisp_rainbow=1
+let g:lisp_rainbow = 1
 let g:slimv_repl_split=4
+let g:slimv_leader = ','
 
 set number
 set nowrap
 set incsearch
 set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+let mapleader='z'
 
 syntax on
 colo peachpuff
@@ -35,7 +38,8 @@ colo peachpuff
 inoremap jj <Esc>
 noremap 2O O<CR><Esc>ki
 
-noremap ;h h
-noremap ;j j
-noremap ;k k
-noremap ;l l
+noremap <Leader>h h
+noremap <Leader>j j
+noremap <Leader>k k
+noremap <Leader>l l
+
