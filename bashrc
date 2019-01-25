@@ -57,7 +57,10 @@ class() {
 	cd ~/School/Spring2019/"$1"
 }
 export -f class
-export EDITOR="/usr/bin/vim"
+
+export VISUAL=/usr/bin/vim
+export EDITOR=$VISUAL
+export GIT_EDITOR=$VISUAL
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
