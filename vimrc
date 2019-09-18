@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'kovisoft/slimv'
+Plug 'lervag/vimtex'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
