@@ -21,6 +21,14 @@ let g:lisp_rainbow = 1
 let g:slimv_repl_split=4
 let g:slimv_leader = ','
 
+"This is from Castel's blog. I might not want to do the concealment on the
+"bottom 2 lines
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
 set number
 set nowrap
 set incsearch
@@ -28,9 +36,10 @@ set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 let mapleader='z'
+set directory=.,~/tmp/swap//
 
 syntax on
-colo peachpuff
+colo elflord
 "set tabstop=4
 "set shiftwidth=4
 
