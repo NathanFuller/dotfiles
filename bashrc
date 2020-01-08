@@ -53,8 +53,8 @@ export rvm_silence_path_mismatch_check_flag=1
 
 # A function that puts me into the folder for a class
 class() {
-	mkdir -vp ~/School/Fall2019/"$1"
-	cd ~/School/Fall2019/"$1"
+	mkdir -vp ~/School/Spring2020/"$1"
+	cd ~/School/Spring2020/"$1"
 }
 export -f class
 
