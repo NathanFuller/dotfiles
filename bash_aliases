@@ -10,4 +10,6 @@ alias less="less -R "
 alias ..="cd .."
 
 alias build='mkdir build; cd build/; cmake ..'
-alias htop='htop -d 1'
+#alias htop='htop -d 1'
+
+alias pgstart='sudo systemctl start postgresql.service'

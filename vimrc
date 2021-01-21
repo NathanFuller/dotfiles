@@ -40,9 +40,13 @@ set directory=.,~/tmp/swap//
 
 syntax on
 colo elflord
-"set tabstop=4
-"set shiftwidth=4
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
+nnoremap <Leader><Space> :set list!<CR> 
+set listchars=tab:\|->,trail:_,extends:>,precedes:<
 "Special remappings:
 
 inoremap jj <Esc>
@@ -53,3 +57,5 @@ noremap <Leader>j j
 noremap <Leader>k k
 noremap <Leader>l l
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
