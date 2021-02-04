@@ -60,10 +60,10 @@ bindsym $mod+Ctrl+m exec pavucontrol
  bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Volume control
- bindsym XF86AudioLowerVolume exec "/usr/bin/pulseaudio-ctl down"   
- bindsym XF86AudioRaiseVolume exec "/usr/bin/pulseaudio-ctl up"     
- bindsym XF86AudioMute exec "/usr/bin/pulseaudio-ctl mute "         
- bindsym XF86AudioMicMute exec "/usr/bin/pulseaudio-ctl mute-input" 
+ bindsym XF86AudioLowerVolume exec "/usr/bin/pulseaudio-ctl down"
+ bindsym XF86AudioRaiseVolume exec "/usr/bin/pulseaudio-ctl up"
+ bindsym XF86AudioMute exec "/usr/bin/pulseaudio-ctl mute "
+ bindsym XF86AudioMicMute exec "/usr/bin/pulseaudio-ctl mute-input"
 
 
 # Start Applications
