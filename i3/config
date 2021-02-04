@@ -29,6 +29,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec terminal
 
+# see htop information
+bindsym $mod+i exec terminal -e 'htop -d 5'
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
