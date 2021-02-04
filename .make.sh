@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files=" bash_aliases bashrc vim vimrc i3/config "    # list of files/folders to symlink in homedir
+files=" bash_aliases bashrc vim vimrc i3/config wallpaper fehbg"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -24,6 +24,9 @@ echo "...done"
 
 #i3 will look for a config here
 mkdir -p ~/.i3
+
+# create wallpaper dir
+mkdir -p ~/.wallpaper
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do

@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+import random
+import subprocess
+
+# find ~/.wallpaper/Landscape/ -maxdepth 1 -type f
+lands = subprocess.run("find ~/.wallpaper/Landscape/  -type f",  shell=True, capture_output=True, encoding="utf-8").stdout.split('\n')
+ports = subprocess.run("find ~/.wallpaper/Portrait/ -type f",  shell=True, capture_output=True, encoding="utf-8").stdout.split('\n')
+
+land = random.choice(lands)
+port = random.choice(ports)
+
+setBGcommand = ["feh", "--no-fehbg", "--bg-max",land, port]
+
+subprocess.run(setBGcommand)
