@@ -27,6 +27,8 @@ for pic in list_of_images:
         subfolder = ""
         if folderinfo:
             subfolder = folderinfo[-1]
+            subprocess.run(["mkdir", "-p", "Landscape/" + subfolder])
+            subprocess.run(["mkdir", "-p", "Portrait/" + subfolder])
 
         # determine if it's portrait or landscape;
         # put it in the right folder

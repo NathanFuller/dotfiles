@@ -27,7 +27,10 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec "terminator || terminal"
+
+# see htop information
+bindsym $mod+i exec terminal -e 'htop -d 5'
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -57,9 +60,11 @@ bindsym $mod+Ctrl+m exec pavucontrol
  bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Volume control
- bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 1 -10%"
- bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 1 +10%"
- bindsym XF86AudioMute exec "pactl set-sink-mute 1 toggle"
+ bindsym XF86AudioLowerVolume exec "/usr/bin/pulseaudio-ctl down"
+ bindsym XF86AudioRaiseVolume exec "/usr/bin/pulseaudio-ctl up"
+ bindsym XF86AudioMute exec "/usr/bin/pulseaudio-ctl mute "
+ bindsym XF86AudioMicMute exec "/usr/bin/pulseaudio-ctl mute-input"
+
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
