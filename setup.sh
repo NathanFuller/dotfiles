@@ -7,7 +7,7 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
+olddir=~/.dotfiles_old             # old dotfiles backup directory
 files=" bash_aliases bashrc vim vimrc i3/config wallpaper fehbg"    # list of files/folders to symlink in homedir
 
 ##########
