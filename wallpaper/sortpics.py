@@ -2,7 +2,7 @@
 import subprocess
 import re
 
-imageRE = re.compile(r"(?<!Landscape)(?<!Portrait).*\.(jpg|JPG|png|PNG)")
+imageRE = re.compile(r"(?<!Landscape)(?<!Portrait).*\.(jpe?g|JPE?G|png|PNG)")
 sizeRE = re.compile(r"(\d+)x(\d+)")
 folderRE = re.compile(r"(/?[^/]*/)")
 
