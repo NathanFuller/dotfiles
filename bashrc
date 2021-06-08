@@ -61,6 +61,7 @@ export -f class
 export VISUAL=/usr/bin/vim
 export EDITOR=$VISUAL
 export GIT_EDITOR=$VISUAL
+export CHROME_EXECUTABLE=google-chrome-stable
 
 #This is for the GeminiAI project:
 export PGDATA=/var/lib/postgres/data
