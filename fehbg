@@ -2,14 +2,23 @@
 
 import random
 import subprocess
+import re
 
-# find ~/.wallpaper/Landscape/ -maxdepth 1 -type f
+
+xrandrOut = subprocess.run("xrandr", capture_output=True, encoding="utf-8").stdout
+
+dimensions = re.findall(r"\Wconnected (\d+)x(\d+)", xrandrOut)
+
+monitors = [dim[0] > dim[1] for dim in dimensions]  # In this list, True represents a monitor in Landscape orientation and False a monitor in Portrait.
+
 lands = subprocess.run("find ~/.wallpaper/Landscape/  -type f",  shell=True, capture_output=True, encoding="utf-8").stdout.split('\n')
 ports = subprocess.run("find ~/.wallpaper/Portrait/ -type f",  shell=True, capture_output=True, encoding="utf-8").stdout.split('\n')
 
 land = random.choice(lands)
 port = random.choice(ports)
 
-setBGcommand = ["feh", "--no-fehbg", "--bg-max",land, port]
+pics = [(random.choice(lands) if land else random.choice(ports)) for land in monitors]
+
+setBGcommand = ["feh", "--no-fehbg", "--bg-max"] + pics
 
 subprocess.run(setBGcommand)
