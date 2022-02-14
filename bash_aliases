@@ -15,3 +15,4 @@ alias build='mkdir build && cd build/ && cmake ..'
 alias pgstart='sudo systemctl start postgresql.service'
 
 alias dc='docker-compose'
+alias clear='clear -x'

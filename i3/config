@@ -32,6 +32,9 @@ bindsym $mod+Return exec "terminator || terminal"
 # see htop information
 bindsym $mod+i exec terminal -e 'htop -d 5'
 
+# change wallpaper image(s)
+bindsym $mod+g exec ~/.fehbg
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
